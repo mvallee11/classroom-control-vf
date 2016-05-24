@@ -53,7 +53,7 @@ node default {
     content => "Isn't Puppet fun?",
   }
   
-  include::users
-  include::skeleton
+#  include::users
+include::skeleton
 
 }
