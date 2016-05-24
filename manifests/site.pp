@@ -52,4 +52,9 @@ node default {
     mode    => '0664',
     content => "Isn't Puppet fun?",
   }
+  
+  user { 'fundamentals':
+    ensure => present,
+}
+
 }
