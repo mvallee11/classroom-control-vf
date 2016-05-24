@@ -1,3 +1,1 @@
-user { 'fundamentals':
-  ensure => present,
-}
+include user
