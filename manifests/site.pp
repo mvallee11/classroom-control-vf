@@ -50,6 +50,6 @@ file { 'motd':
   owner   => root,
   group   => root,
   mode    => '0664',
-  content => 'Isn't Puppet fun?',
+  content => "Isn't Puppet fun?",
 }
 }
