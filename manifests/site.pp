@@ -53,6 +53,6 @@ node default {
     content => "Isn't Puppet fun?",
   }
   
-  include users
+    include users
 
 }
