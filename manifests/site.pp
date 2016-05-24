@@ -49,7 +49,7 @@ file { 'motd':
   ensure  => file,
   owner   => root,
   group   => root,
-  mode    => '0664'
-  content => 'Isn't Puppet fun?'
+  mode    => '0664',
+  content => 'Isn't Puppet fun?',
 }
 }
