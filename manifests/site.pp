@@ -53,8 +53,6 @@ node default {
     content => "Isn't Puppet fun?",
   }
   
-  user { 'fundamentals':
-    ensure => present,
-}
+  include user
 
 }
