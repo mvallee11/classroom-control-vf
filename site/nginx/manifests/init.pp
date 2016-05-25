@@ -15,7 +15,7 @@ class nginx {
     mode   => '0775',
   }
   
-  file { 'var/www/index.html':
+  file { '/var/www/index.html':
     ensure => file,
     source => 'puppet:///modules/nginx/index.html',
   }
