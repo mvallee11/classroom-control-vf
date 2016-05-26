@@ -44,25 +44,5 @@ node default {
   #   class { 'my_class': }
   #notify { "Hello, my name is ${::hostname}": }
   
-  class {'nginx':
-    root => '/var/www/mvallee11',
-  }
-  
-  $message = hiera('message')
-  notify { $message: }
-
-  #if $::virtual != 'physical' {
-  #  $vmname = capitalize($::virtual)
-  #  notify { "This is a ${vmname} virtual machine.": }
-  #}
-
-  file { 'motd':
-    path    => '/etc/motd',
-    ensure  => file,
-    owner   => root,
-    group   => root,
-    mode    => '0664',
-    content => "Isn't Puppet fun?",
-  }
-  
+  include nginx
 }
