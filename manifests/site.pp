@@ -42,15 +42,15 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  notify { "Hello, my name is ${::hostname}": }
+  #notify { "Hello, my name is ${::hostname}": }
 
-  $message = hiera('hi er a hmmm')
+  $message = hiera('message')
   notify { $message: }
 
-  if $::virtual != 'physical' {
-    $vmname = capitalize($::virtual)
-    notify { "This is a ${vmname} virtual machine.": }
-  }
+  #if $::virtual != 'physical' {
+  #  $vmname = capitalize($::virtual)
+  #  notify { "This is a ${vmname} virtual machine.": }
+  #}
 
   file { 'motd':
     path    => '/etc/motd',
